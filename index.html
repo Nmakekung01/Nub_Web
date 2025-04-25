@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- กำหนดการเข้ารหัสตัวอักษร -->
+    <meta charset="UTF-8" />
+    <!-- ทำให้ responsive กับอุปกรณ์ต่าง ๆ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ชื่อเว็บ -->
+    <title>Nub Web</title>
+    <!-- ไอคอนของเว็บ -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <!-- ส่วนของ CSS -->
+    <style>
+        /* รีเซ็ต margin/padding ทั่วไป */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ตั้งค่าพื้นหลัง สีฟอนต์ และสไตล์ body */
+        body {
+            background: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow-y: scroll;
+        }
+
+        /* กล่องของแต่ละวิดีโอ */
+        .video-container {
+            display: flex; /* วางวิดีโอ + ปุ่มข้าง ๆ กัน */
+            align-items: center;
+            justify-content: flex-start; /* เริ่มจากซ้าย */
+            height: 100vh; /* สูงเท่ากับขนาดหน้าจอ */
+            padding-left: 5%;
+            position: relative;
+        }
+
+        /* ขนาดของ iframe และวิดีโอ */
+        iframe,
+        video {
+            width: 70%;
+            height: 80%;
+        }
+
+        /* ตำแหน่งของปุ่มและเคาน์เตอร์ */
+        .controls_right {
+            position: absolute;
+            right: 5%; /* ชิดขวา */
+            top: 50%; /* อยู่ตรงกลางแนวดิ่ง */
+            transform: translateY(-50%); /* ปรับให้กลางจริง ๆ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; /* ช่องว่างระหว่างปุ่มกับตัวเลข */
+        }
+
+        .controls_left {
+            position: absolute;
+            left: 5%; /* ชิดขวา */
+            top: 50%; /* อยู่ตรงกลางแนวดิ่ง */
+            transform: translateY(-50%); /* ปรับให้กลางจริง ๆ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; /* ช่องว่างระหว่างปุ่มกับตัวเลข */
+        }
+
+        /* ปุ่มหัวเราะ */
+        .laugh-btn {
+            background: none;
+            border: none;
+            color: yellow;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* ตัวนับจำนวนหัวเราะ */
+        .counter {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* เส้นคั่นระหว่างวิดีโอ */
+        .divider {
+            width: 90%;
+            height: 2px;
+            background: #444;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ข้อความเปิด -->
+    <div style="text-align: center; margin-top: 20px; font-size: 2rem; color: white;">
+        Fire video !!! 🔥
+    </div>
+
+    <!-- วิดีโอ 1 -->
+    <div class="video-container">
+        <video src="cat1.mp4" controls></video> <!-- วิดีโอแมว -->
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button> <!-- ปุ่มหัวเราะ -->
+            <div class="counter">0</div> <!-- ตัวนับจำนวน -->
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 2 -->
+    <div class="video-container">
+        <video src="cat2.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 3 -->
+    <div class="video-container">
+        <video src="cat3.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 4 -->
+    <div class="video-container">
+        <video src="cat4.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 5 -->
+    <div class="video-container">
+        <video src="cat5.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 6 -->
+    <div class="video-container">
+        <video src="cat6.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 7 -->
+    <div class="video-container">
+        <video src="cat7.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 8 -->
+    <div class="video-container">
+        <video src="cat8.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 9 -->
+    <div class="video-container">
+        <video src="cat9.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 10 -->
+    <div class="video-container">
+        <video src="cat10.mp4" controls></video>
+        <div class="controls_right">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- วิดีโอ 10 -->
+    <div class="video-container">
+        <video src="cat10.mp4" controls></video>
+        <div class="controls_left">
+            <button class="laugh-btn">😂</button>
+            <div class="counter">0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <!-- ข้อความปิดท้าย -->
+    <div style="text-align: center; margin-top: 20px; font-size: 2rem; color: white;">
+        Wait for more in the future !!! 🔥
+    </div>
+
+    <!-- ส่วน JavaScript -->
+    <script>
+        // ดึงปุ่มหัวเราะ, ตัวนับ, และวิดีโอทั้งหมด
+        const laughButtons = document.querySelectorAll(".laugh-btn");
+        const counters = document.querySelectorAll(".counter");
+        const videos = document.querySelectorAll("video");
+
+        // เมื่อคลิกปุ่มหัวเราะ จะเพิ่มค่าตัวนับ
+        laughButtons.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                const count = parseInt(counters[i].textContent);
+                counters[i].textContent = count + 1;
+            });
+        });
+
+        // ตรวจสอบเมื่อ scroll แล้วเปิดเล่นวิดีโอที่อยู่บนจอ
+        function handleScroll() {
+            let windowHeight = window.innerHeight;
+
+            videos.forEach((video) => {
+                const rect = video.getBoundingClientRect(); // ตำแหน่งวิดีโอบนหน้าจอ
+
+                if (rect.top >= 0 && rect.bottom <= windowHeight) {
+                    video.volume = 0.5; // ตั้งเสียงไว้ครึ่งนึง
+                    video.play(); // เล่นวิดีโอ
+                } else {
+                    video.pause(); // หยุดถ้าอยู่นอกจอ
+                }
+            });
+        }
+
+        // เรียก handleScroll ตอน scroll และโหลดหน้า
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("load", handleScroll); // ให้เล่นวิดีโอแรกตอนเปิดเว็บ
+    </script>
+
+</body>
+</html>
